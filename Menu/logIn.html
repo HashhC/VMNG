@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V&M Iniciar Sesión</title>
+    <link rel="stylesheet" href="../Estilos/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="menu">
+            <Ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="soporte.html">Soporte</a></li>
+            </Ul>
+    </header>
+
+    <div class="login-container">
+        <form class="login-form" id="loginForm">
+            <h1>Iniciar Sesión</h1>
+
+            <input type="text" id="username" name="username" required placeholder="Usuario">
+            <input type="password" id="password" name="password" required placeholder="Contraseña">
+
+            <div class="remember-me">
+                <input type="checkbox" id="rememberMe" name="rememberMe">
+                <P>Recordarme</P>
+            </div>
+            <button type="submit">Ingresar</button>
+        </form>
+        <p id="errorMsg"></p>
+    </div>
+</body>
+</html>
