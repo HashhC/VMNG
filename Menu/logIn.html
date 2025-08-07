@@ -21,14 +21,20 @@
         <form class="login-form" id="loginForm">
             <h1>Iniciar Sesión</h1>
 
-            <input type="text" id="username" name="username" required placeholder="Usuario">
-            <input type="password" id="password" name="password" required placeholder="Contraseña">
+            <input type="text" id="username" name="username" required placeholder="Usuario" minlength="3" maxlength="16">
+            <input type="text" name="CI" id="CI" required placeholder="Cédula de Identidad" maxlength="8">
+            <input type="password" id="password" name="password" required placeholder="Contraseña" minlength="8" maxlength="16">
 
-            <div class="remember-me">
+            <div class="rememberMe">
                 <input type="checkbox" id="rememberMe" name="rememberMe">
                 <P>Recordarme</P>
             </div>
+
             <button type="submit">Ingresar</button>
+            <ul class="log-options">
+                <li><a href="register.html">¿No tienes cuenta? Regístrate</a></li>
+                <li><a href="forgotPassword.html">¿Olvidaste tu contraseña?</a></li>
+            </ul>
         </form>
         <p id="errorMsg"></p>
     </div>

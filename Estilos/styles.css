@@ -397,13 +397,21 @@ h2{
 }
 
 
-.remember-me input[type="checkbox"] {
+.rememberMe input[type="checkbox"] {
     width: 20px;
     height: 15px;
 }
 
-.remember-me p {
-    display: inline-block;
+.rememberMe p {
+    display: inline;
     position: fixed;
+    color: white;
+}
+
+.log-options {
+    text-decoration: none;
+    list-style: none;
+    text-align: center;
+    margin-top: 15px;
     color: white;
 }
