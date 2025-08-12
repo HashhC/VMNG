@@ -7,10 +7,9 @@
 /* Estilos generales del body */
 body{
     font-family: Arial, Helvetica, sans-serif; 
-    background-image: url(../Imagenes/Fondo_T.jpg); 
-    background-repeat: no-repeat;
+    background-image: url(../Imagenes/Testing.jpg); 
     background-size: cover; 
-    background-attachment: fixed; 
+    background-attachment: static; 
     color: rgb(0, 0, 0);
 }
 
@@ -414,4 +413,13 @@ h2{
     text-align: center;
     margin-top: 15px;
     color: white;
+}
+
+.log-options a {
+    color: white;
+    text-decoration: none;
+}
+
+.log-options a:hover {
+    color: rgb(129, 129, 129);
 }

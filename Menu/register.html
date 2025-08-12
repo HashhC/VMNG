@@ -21,18 +21,20 @@
         <form class="register-form" id="registerForm">
             <h1>Registrarse</h1>
 
-            <input type="text" id="username" name="username" required placeholder="Usuario"minlength="3" maxlength="16">
+            <input type="text" id="name" name="name" required placeholder="Nombre"minlength="3" maxlength="16">
+            <input type="text" id="lastName" name="lastName" required placeholder="Apellido"minlength="3" maxlength="16">
             <input type="email" id="email" name="email" required placeholder="Correo Electrónico">
             <input type="password" id="password" name="password" required placeholder="Contraseña" minlength="8" maxlength="16">
-            <input type="text" name="CI" id="CI" required placeholder="Cédula de Identidad" maxlength="8">
 
-            <div class="log-options">
+            <div class="rememberMe">
                 <input type="checkbox" id="rememberMe" name="rememberMe">
-                <P class="rememberMe">Recordarme</P>
-
-                <p></p>
+                <P>Recordarme</P>
             </div>
+
             <button type="submit">Ingresar</button>
+            <ul class="log-options">
+                <li>¿Ya tiene una cuenta?<a href="logIn.html"> Inicie sesión</a></li>
+            </ul>
         </form>
         <p id="errorMsg"></p>
     </div>
