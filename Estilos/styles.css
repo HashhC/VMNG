@@ -7,19 +7,21 @@
 /* Estilos generales del body */
 body{
     font-family: Arial, Helvetica, sans-serif; 
-    background-image: url(../Imagenes/Testing.jpg); 
+    background-image: url(); 
     background-size: cover; 
     background-attachment: static; 
+    background-color: rgb(0, 0, 0);
     color: rgb(0, 0, 0);
 }
 
 
 /* Estilo del encabezado 1*/
 h1{
-    font-size: 36px;
+    font-size: 70px;
+    font-family: "Montserrat";
+    font-weight: 400;
     color: white;
     margin-bottom: 10px; 
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
 }
 
 /* Estilo del encabezado 2*/
@@ -29,6 +31,12 @@ h2{
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
 }
 
+/* Estilo del párrafo */
+p{
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-weight: 400;
+}
 
 /* Estilo del contenedor del menú */
 .menu{
@@ -52,8 +60,9 @@ h2{
 .menu ul li a{
     color: aliceblue; 
     text-decoration: none; 
-    font-weight: bold; 
-    font-size: 18px; 
+    font-weight: 400; 
+    font-size: 18px;
+    font-family: "Montserrat"; 
     transition: 0.3s; 
 }
 
@@ -104,12 +113,17 @@ h2{
     display: block;
 }
 
+.contenido div{
+    margin-right: 0;
+    margin-left: 0;
+}
+
 /* Estilo de bienvenida */
 .bienvenida {
-    text-align: center;
-    padding: 20px;
+    text-align: left;
     margin: 25px 100px 25px 100px;
-    border-radius: 10px;
+
+    padding: 0% 20px;
 }
 
 /* Estilo del texto de bienvenida */
@@ -117,20 +131,6 @@ h2{
     color: white;
     margin-bottom: 20px; 
 }
-
-.contenido p {
-    font-size: 18px;
-    line-height: 1.5; 
-    color: white; 
-}
-
-/* Contenedor principal del contenido */
-.contenidoInicio {
-    margin: 25px;
-    max-width: auto;
-    text-align: center;
-}
-
 
 /* Contenedor para la sección de servicios */
 .serviciosPopulares {
@@ -292,6 +292,7 @@ h2{
     padding: 30px 40px;
     border-radius: 5px;
     box-shadow: 0px 0px 20px rgb(0, 0, 0);
+    font-family: "Montserrat";
 }
 
 .login-form {
@@ -316,6 +317,7 @@ h2{
 .login-form input{
     width: 350px;
     font-size: 16px;
+    font-family: "Montserrat";
 }
 
 .login-form button {
@@ -327,6 +329,7 @@ h2{
     cursor: pointer;
     font-size: 16px;
     margin-top: 15px;
+    font-family: "Montserrat";
 }
 
 .login-form button:hover {
@@ -349,6 +352,7 @@ h2{
     padding: 30px 40px;
     border-radius: 5px;
     box-shadow: 0px 0px 20px rgb(0, 0, 0);
+    font-family: "Montserrat";
 }
 
 .register-form {
@@ -372,6 +376,7 @@ h2{
 
 .register-form input{
     width: 350px;
+    font-family: "Montserrat";
     font-size: 16px;
 }
 
@@ -383,6 +388,7 @@ h2{
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    font-family: "Montserrat";
     margin-top: 15px;
 }
 
