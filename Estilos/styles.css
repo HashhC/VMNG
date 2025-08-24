@@ -4,32 +4,39 @@
     box-sizing: border-box; 
 }
 
+::selection {
+  background: rgb(119, 119, 119); /* color de fondo de la selección */
+  color: white;        /* color del texto seleccionado */
+}
+
 /* Estilos generales del body */
 body{
-    font-family: Arial, Helvetica, sans-serif; 
-    background-image: url(../Resources/Images/); 
-    background-size: cover; 
+    font-family: "Montserrat"; 
     background-attachment: static; 
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
 }
 
-
 /* Estilo del encabezado 1*/
 h1{
+    text-align: center;
+    font-size: 124px;
+    font-family: "Montserrat";
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    margin-bottom: 10px;
+    margin-top: 50px;
+}
+
+/* Estilo del encabezado 2*/
+h2{
     text-align: center;
     font-size: 32px;
     font-family: "Montserrat";
     font-weight: 500;
     color: rgb(0, 0, 0);
-    margin-bottom: 10px; 
-}
+    margin-bottom: 10px;
 
-/* Estilo del encabezado 2*/
-h2{
-    font-size: 32px;
-    color: rgb(0, 0, 0);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
 }
 
 /* Estilo del párrafo */
@@ -42,9 +49,13 @@ p{
 
 /* Estilo del contenedor del menú */
 .menu{
+    position: fixed;
     background-color: rgb(34, 34, 34);
+    width: 100%;
+    top: 0%;
     padding: 20px;
-    text-align: center; 
+    text-align: center;
+    z-index: 1000;
 }
 
 /* Elimina los bullets de la lista */
@@ -84,6 +95,7 @@ p{
     cursor: pointer;
 }
 
+/* Efecto hover para el icono de inicio de sesión */
 .login img:hover{
     transform: scale(1.1); 
 }
@@ -100,6 +112,7 @@ p{
     width: 150px;
 }
 
+/* Estilo del checkbox para el toggle del perfil */
 .opcionesPerfil a {
     display:block;
     color: white;
@@ -107,126 +120,209 @@ p{
     padding: 15px;
 }
 
+/* Estilo del label para el toggle del perfil */
 .opcionesPerfil a:hover {
     color: rgb(129, 129, 129);
 }
 
+/* Estilo del checkbox para el toggle del perfil */
 #togglePerfil:checked + label + .opcionesPerfil {
     display: block;
 }
 
-.contenido div{
+/* Estilo contenedor bienvenido */
+.bienvenida {
+    background-image: url(../Resources/Images/2.jpg);
+    background-size: cover;
+    background-attachment: static;
+    background-repeat: no-repeat;
+    text-align: center;
+    background-color: rgb(241, 241, 241);
+    padding-bottom: 190px;
+    margin-top: 62px;;
+    border-bottom: 2px solid black;
+}
+
+.bienvenida h1{
+    padding-top: 20px;
+    margin-bottom: 100px;
+}
+/* Estilo del contenedor de reserva */
+.reserva{
+    display: inline-block;
+    margin: auto;
+    border-radius: 5px;
+    background-color: rgb(226, 226, 226);
+    padding: 30px 0px 30px 0px;
+    width: 300px;
+}
+
+/* Estilo del título de reserva */
+.reserva h1{
+    font-size: 38px;
+}
+
+/* Estilo del párrafo dentro del contenedor de reserva */
+.reserva p{
+    margin: 20px 20px 80px 20px;
+    font-size: 18px;
+}
+
+/* Estilo del botón de reserva */
+.btnReserva {
+    padding: 10px 80px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Montserrat";
+    font-size: 18px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo del enlace dentro del botón de reserva */
+.btnReserva a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+/* Efecto hover para el botón de reserva */
+.btnReserva:hover {
+    transition: 0.3s;
+    background-color: rgb(187, 187, 187);
+    color: white;
+}
+
+/* Estilo del h2 y p compartido */
+.nosotros h2, p{
+    text-align: center;
     margin-right: 25%;
     margin-left: 25%;
 }
 
-/* Estilo de bienvenida */
-.nosotros {
-    text-align: left;
-    margin: 25px 100px 25px 100px;
-    padding: 0% 20px;
+/* Estilo del título de nosotros */
+.nosotros h2{
+    margin-top: 20px;
+    padding-top: 32px;
+    margin-bottom: 20px;
 }
 
-/* Estilo del texto de bienvenida */
+/* Estilo del texto de nosotros */
 .nosotros p {
     text-align: center;
     color: rgb(0, 0, 0);
     font-size: 18px;
+    margin-bottom: 60px;
 }
 
+/* Estilo del contenedor de mapa */
 .mapa {
-    position:relative;
     align-items: center;
     width: 50%;
-    height: 500px;
-    margin: 50px auto; /* centrado horizontal */
+    height: 550px;
+    margin: auto auto 85px auto; /* centrado horizontal */
     border-radius: 10px;
     overflow: hidden; /* para que el borde redondeado afecte al iframe */
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
+/* Estilo del iframe dentro del contenedor de mapa */
 .mapa iframe {
     width: 100%;
     height: 100%;
     border: 0;
 }
 
-/* Contenedor para la sección de servicios */
-.serviciosPopulares {
+/* Estilo del contenedor de servicios */
+.serviciosPreview {
+    border-top: 2px solid black;
     text-align: center;
-    padding: 20px;
-    background-color: rgba(34, 34, 34, 0.5);
-    max-width: auto; 
+    background-color: rgb(241, 241, 241);
+    margin-top: 20px;
+    padding-top: 32px;
+    padding-bottom: 30px;
 }
 
-/* Estilo de imágenes dentro de listas ordenadas */
-.serviciosPopulares ol li img{
-    object-fit: cover; 
-    width: 300px;
-    height: 300px;
-    border-radius: 15px; 
-    padding-top: 3px;
-    padding-left: 3px;
-    padding-right: 3px;
+/* Contenedor para la lista de servicios en la página principal */
+.serviciosIndex {
+    align-items: center;
+    margin: auto;
+    width: 60%;
 }
 
-/* Estilo de los ítems de lista ordenada */
-.serviciosPopulares ol li{
-    display: inline-block; 
-    width: 300px;
+/* Estilo de los ítems de lista no ordenada */
+.serviciosIndex li{
+    display: inline-block;
+    width: 280px;
+    margin: 25px;
     text-align: center;
     background-color: rgb(255, 255, 255);
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); 
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
 }
+
+/* Estilo de imágenes en listas no ordenadas */
+.serviciosIndex li img{
+    object-fit: cover;
+    width: 280px;
+    height: 280px;
+    border-radius: 8px;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
 /* Estilo del texto debajo de las imágenes */
-.serviciosPopulares p{
-    font-size: 16px;
-    font-weight: bold;
+.serviciosIndex p{
+    font-family: "Montserrat";
+    font-size: 18px;
+    font-weight: 400;
     margin-bottom: 5px;
     color: rgb(0, 0, 0); 
 }
 
 /* Enlaces dentro de los servicios sin subrayado */
-.serviciosPopulares a{
+.serviciosIndex a{
     text-decoration: none;
 }
 
 /* Animación suave para agrandar elementos al pasar el mouse */
-.serviciosPopulares li{
+.serviciosIndex li{
     transition: 0.3s;
 }
 
 /* Efecto de "zoom" al pasar el mouse */
-.serviciosPopulares li:hover{
-    transform: scale(1.05);
+.serviciosIndex li:hover{
+    transform: scale(1.02);
 }
 
-/* Estilo de imágenes en listas no ordenadas */
-.serviciosPopulares li img{
-    object-fit: cover;
-    width: 250px;
-    height: 250px;
-    border-radius: 15px;
-    padding-top: 3px;
-    padding-left: 3px;
-    padding-right: 3px;
-}
-
-/* Estilo de los ítems de lista no ordenada */
-.serviciosPopulares li{
-    display: inline-block;
-    width: 250px;
-    margin: 25px;
-    text-align: center;
+/* Estilo del botón ver más servicios */
+.verMasServicios {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Montserrat";
+    font-size: 18px;
     background-color: rgb(255, 255, 255);
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
 }
 
+/* Efecto hover para el botón ver más servicios */
+.verMasServicios a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.verMasServicios:hover {
+    transition: 0.3s;
+    background-color: rgb(216, 216, 216);
+    color: white;
+}
 
 /* Contenedor para la sección de servicios */
-.Servicios {
+.servicios {
     text-align: center;
     margin: 10px;
     padding: 20px;
@@ -235,52 +331,19 @@ p{
     border-radius: 5px;
 }
 
-/* Estilo de imágenes dentro de listas ordenadas */
-.Servicios ol li img{
-    object-fit: cover; 
-    width: 300px;
-    height: 300px;
-    border-radius: 15px;
-    padding-top: 3px;
-    padding-left: 3px;
-    padding-right: 3px;
-}
-
-/* Estilo de los ítems de lista ordenada */
-.Servicios ol li{
-    display: inline-block; 
-    width: 300px;
-    margin: 15px;
+/* Estilo de los ítems de lista no ordenada */
+.servicios li {
+    display: inline-block;
+    width: 250px;
+    margin: 25px;
     text-align: center;
-    background-color: rgb(255, 255, 255); 
+    background-color: rgb(255, 255, 255);
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); 
-}
-/* Estilo del texto debajo de las imágenes */
-.Servicios p{
-    font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: rgb(0, 0, 0); 
-}
-
-/* Enlaces dentro de los servicios sin subrayado */
-.Servicios a{
-    text-decoration: none;
-}
-
-/* Animación suave para agrandar elementos al pasar el mouse */
-.Servicios li{
-    transition: 0.3s;
-}
-
-/* Efecto de "zoom" al pasar el mouse */
-.Servicios li:hover{
-    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Estilo de imágenes en listas no ordenadas */
-.Servicios li img{
+.servicios li img {
     object-fit: cover;
     width: 250px;
     height: 250px;
@@ -290,15 +353,32 @@ p{
     padding-right: 3px;
 }
 
-/* Estilo de los ítems de lista no ordenada */
-.Servicios li{
-    display: inline-block;
-    width: 250px;
-    margin: 25px;
-    text-align: center;
-    background-color: rgb(255, 255, 255);
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+/* Estilo del encabezado 2 de servicios */
+.servicios h2 {
+    margin-top: 50px;
+}
+
+/* Estilo del texto debajo de las imágenes */
+.servicios p {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: rgb(0, 0, 0); 
+}
+
+/* Enlaces dentro de los servicios sin subrayado */
+.servicios a {
+    text-decoration: none;
+}
+
+/* Animación suave para agrandar elementos al pasar el mouse */
+.servicios li {
+    transition: 0.3s;
+}
+
+/* Efecto de "zoom" al pasar el mouse */
+.servicios li:hover {
+    transform: scale(1.02);
 }
 
 /* Estilo del Login */
@@ -310,36 +390,37 @@ p{
     background: rgb(34, 34, 34);
     padding: 30px 40px;
     border-radius: 5px;
-    box-shadow: 0px 0px 20px rgb(0, 0, 0);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
     font-family: "Montserrat";
 }
 
+/* Estilo del formulario de login */
 .login-form {
     display: flex;
     flex-direction: column;
 }
 
-.login-form h1 {
+/* Estilo del título del formulario de login */
+.login-form h2 {
     text-align: center;
     color: white;
     margin-bottom: 35px;
     font-size: 48px;
 }
 
+/* Estilo de los campos de entrada del formulario de login */
 .login-form input {
     padding: 10px;
     margin-bottom: 20px;
     border: none;
     border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.8);
-}
-
-.login-form input{
     width: 350px;
     font-size: 16px;
     font-family: "Montserrat";
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
+/* Estilo del botón de envío del formulario de login */
 .login-form button {
     padding: 10px;
     background-color: rgb(129, 129, 129); 
@@ -352,15 +433,16 @@ p{
     font-family: "Montserrat";
 }
 
+/* Efecto hover para el botón de envío del formulario de login */
 .login-form button:hover {
     background-color: rgb(73, 73, 73); 
 }
 
+/* Estilo al enfocar los campos de entrada del formulario de login */
 .login-form input:focus {
     outline: none;
     border: 2px solid rgb(129, 129, 129); 
 }
-
 
 /* Estilo del Register */
 .register-container {
@@ -371,36 +453,37 @@ p{
     background: rgb(34, 34, 34);
     padding: 30px 40px;
     border-radius: 5px;
-    box-shadow: 0px 0px 20px rgb(0, 0, 0);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
     font-family: "Montserrat";
 }
 
+/* Estilo del formulario de registro */
 .register-form {
     display: flex;
     flex-direction: column;
 }
 
-.register-form h1 {
+/* Estilo del título del formulario de registro */
+.register-form h2 {
     text-align: center;
     color: white;
     margin-bottom: 35px;
     font-size: 48px;
 }
 
+/* Estilo de los campos de entrada del formulario de registro */
 .register-form input {
     padding: 10px;
     margin-bottom: 20px;
     border: none;
     border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.8);
-}
-
-.register-form input{
     width: 350px;
     font-family: "Montserrat";
     font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
+/* Estilo del botón de envío del formulario de registro */
 .register-form button {
     padding: 10px;
     background-color: rgb(129, 129, 129); 
@@ -413,27 +496,32 @@ p{
     margin-top: 15px;
 }
 
+/* Efecto hover para el botón de envío del formulario de registro */
 .register-form button:hover {
     background-color: rgb(73, 73, 73); 
 }
 
+/* Estilo al enfocar los campos de entrada del formulario de registro */
 .register-form input:focus {
     outline: none;
     border: 2px solid rgb(129, 129, 129); 
 }
 
-
+/* Estilo del checkbox recordar sesión */
 .rememberMe input[type="checkbox"] {
     width: 20px;
-    height: 15px;
 }
 
+/* Estilo del texto recordar sesión */
 .rememberMe p {
+    margin-left: -4px;
+    bottom: 1px;
     display: inline;
-    position: fixed;
+    position: relative;
     color: white;
 }
 
+/* Estilo de las opciones del login */
 .log-options {
     text-decoration: none;
     list-style: none;
@@ -442,11 +530,13 @@ p{
     color: white;
 }
 
+/* Estilo de los enlaces dentro de las opciones del login */
 .log-options a {
     color: white;
     text-decoration: none;
 }
 
+/* Efecto hover para los enlaces dentro de las opciones del login */
 .log-options a:hover {
     color: rgb(129, 129, 129);
 }
