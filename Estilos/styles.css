@@ -136,6 +136,7 @@ p{
     background-size: cover;
     background-attachment: static;
     background-repeat: no-repeat;
+    background-position: 0 20px;
     border-bottom: 2px solid black;
     display: flex;
     flex-direction: column;
@@ -244,7 +245,6 @@ p{
 
 /* Estilo del contenedor de servicios */
 .serviciosPreview {
-    border-top: 2px solid black;
     text-align: center;
     background-color: rgb(241, 241, 241);
     margin-top: 20px;
@@ -330,63 +330,70 @@ p{
     color: white;
 }
 
-/* Contenedor para la sección de servicios */
+/* Estilo del contenedor de servicios */
 .servicios {
+    border-top: 2px solid black;
     text-align: center;
-    margin: 10px;
-    padding: 20px;
-    background-color: rgba(37, 30, 30, 0.212);
-    max-width: auto;
-    border-radius: 5px;
+    background-color: rgb(241, 241, 241);
+    margin-top: 20px;
+    padding-top: 32px;
+    padding-bottom: 30px;
+}
+
+.servicios h2{
+    margin-top: 20px;
+}
+
+/* Contenedor para la lista de servicios en la página principal */
+.serviciosList {
+    align-items: center;
+    margin: auto;
+    width: 60%;
 }
 
 /* Estilo de los ítems de lista no ordenada */
-.servicios li {
+.serviciosList li{
     display: inline-block;
-    width: 250px;
+    width: 280px;
     margin: 25px;
     text-align: center;
     background-color: rgb(255, 255, 255);
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* Estilo de imágenes en listas no ordenadas */
-.servicios li img {
+.serviciosList li img{
     object-fit: cover;
-    width: 250px;
-    height: 250px;
-    border-radius: 15px;
-    padding-top: 3px;
-    padding-left: 3px;
-    padding-right: 3px;
-}
-
-/* Estilo del encabezado 2 de servicios */
-.servicios h2 {
-    margin-top: 50px;
+    width: 280px;
+    height: 280px;
+    border-radius: 8px;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 /* Estilo del texto debajo de las imágenes */
-.servicios p {
-    font-size: 16px;
-    font-weight: bold;
+.serviciosList p{
+    font-family: "Montserrat";
+    font-size: 18px;
+    font-weight: 400;
     margin-bottom: 5px;
     color: rgb(0, 0, 0); 
 }
 
 /* Enlaces dentro de los servicios sin subrayado */
-.servicios a {
+.serviciosList a{
     text-decoration: none;
 }
 
 /* Animación suave para agrandar elementos al pasar el mouse */
-.servicios li {
+.serviciosList li{
     transition: 0.3s;
 }
 
 /* Efecto de "zoom" al pasar el mouse */
-.servicios li:hover {
+.serviciosList li:hover{
     transform: scale(1.02);
 }
 
