@@ -132,7 +132,7 @@ p{
 
 /* Estilo contenedor bienvenido */
 .bienvenida {
-    background-image: url(../Resources/Images/2.jpg);
+    background-image: url(../Resources/Images/background.png);
     background-size: cover;
     background-attachment: static;
     background-repeat: no-repeat;
@@ -284,10 +284,11 @@ p{
 /* Estilo del texto debajo de las imágenes */
 .serviciosIndex p{
     font-family: "Montserrat";
+    text-align: center;
     font-size: 18px;
     font-weight: 400;
-    margin-bottom: 5px;
-    color: rgb(0, 0, 0); 
+    margin: 0 10px 5px 10px;
+    color: rgb(0, 0, 0);
 }
 
 /* Enlaces dentro de los servicios sin subrayado */
@@ -340,6 +341,7 @@ p{
     padding-bottom: 30px;
 }
 
+/* Estilo del título de servicios */
 .servicios h2{
     margin-top: 20px;
 }
@@ -376,10 +378,11 @@ p{
 /* Estilo del texto debajo de las imágenes */
 .serviciosList p{
     font-family: "Montserrat";
+    text-align: center;
     font-size: 18px;
     font-weight: 400;
-    margin-bottom: 5px;
-    color: rgb(0, 0, 0); 
+    margin: 0 10px 5px 10px;
+    color: rgb(0, 0, 0);
 }
 
 /* Enlaces dentro de los servicios sin subrayado */
@@ -555,4 +558,36 @@ p{
 /* Efecto hover para los enlaces dentro de las opciones del login */
 .log-options a:hover {
     color: rgb(129, 129, 129);
+}
+
+/* Estilo de la lista de contactos */
+.contacto {
+    text-align: center;
+    background-color: rgb(241, 241, 241);
+    padding-top: 32px;
+    padding-bottom: 30px;
+}
+
+/* Estilo del título de contacto */
+.contacto h2{
+    margin-top: 20px;
+    padding-top: 32px;
+    margin-bottom: 20px;
+}
+
+/* Estilo de la lista de contactos */
+.contacto ul{
+    list-style: none;
+}
+
+/* Estilo de los ítems de la lista de contactos */
+.contacto ul li{
+    margin: 0 15px;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+}
+
+/* Estilo de los enlaces dentro de la lista de contactos */
+.contacto img{
+    width: 40px;
 }
