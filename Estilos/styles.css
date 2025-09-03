@@ -36,7 +36,6 @@ h2{
     font-weight: 500;
     color: rgb(0, 0, 0);
     margin-bottom: 10px;
-
 }
 
 /* Estilo del párrafo */
@@ -181,18 +180,19 @@ p{
 /* Estilo del botón de reserva */
 .btnReserva {
     color: white;
-    padding: 12px 25px;
-    font-size: 1rem;
+    font-size: 16px;
     border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    border-radius: 20px;
+    padding: 12px 0;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 /* Estilo del enlace dentro del botón de reserva */
 .btnReserva a {
     text-decoration: none;
+    border-radius: 30px;
+    padding: 12px 25px;
+    padding: 12px 25px;
     color: rgb(0, 0, 0);
 }
 
@@ -293,7 +293,7 @@ p{
 
 /* Enlaces dentro de los servicios sin subrayado */
 .serviciosIndex a{
-    text-decoration: none;
+    text-decoration: none;;
 }
 
 /* Animación suave para agrandar elementos al pasar el mouse */
@@ -309,7 +309,7 @@ p{
 /* Estilo del botón ver más servicios */
 .verMasServicios {
     margin-top: 20px;
-    padding: 10px 20px;
+    padding: 10px 0;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -321,6 +321,7 @@ p{
 
 /* Efecto hover para el botón ver más servicios */
 .verMasServicios a {
+    padding: 10px 20px;
     text-decoration: none;
     color: rgb(0, 0, 0);
 }
@@ -336,14 +337,12 @@ p{
     border-top: 2px solid black;
     text-align: center;
     background-color: rgb(241, 241, 241);
-    margin-top: 20px;
-    padding-top: 32px;
     padding-bottom: 30px;
 }
 
-/* Estilo del título de servicios */
 .servicios h2{
-    margin-top: 20px;
+    margin-top: 72px;
+    margin-bottom: 20px;
 }
 
 /* Contenedor para la lista de servicios en la página principal */
@@ -590,4 +589,82 @@ p{
 /* Estilo de los enlaces dentro de la lista de contactos */
 .contacto img{
     width: 40px;
+}
+
+.agenda h3{
+    width: 220px;
+    font-weight: 600;
+    margin: 10px;
+    text-align: center;
+    margin-top: 92px;
+}
+/* Estilo del contenedor de la agenda */
+.agenda a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    background-color: black;
+}
+
+/* Estilo del texto de la agenda */
+.agenda p{
+    font-family: "Montserrat";
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 10px 0 10px;
+    color: rgb(0, 0, 0);
+}
+
+/* Estilo de la lista de la agenda */
+.agenda ul {
+    margin: 0 0 0 20px;
+    text-align: center;
+    list-style: none;
+    width: 200px;
+    padding: 0;
+}
+
+/* Estilo de los ítems de la lista de la agenda */
+.agenda li{
+    margin: 10px 0;
+}
+
+/* Estilo de los labels de la agenda */
+.agenda label {
+    display: block;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: "Montserrat";
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.3s;
+    background-color: white;
+    color: black;
+}
+
+/* Efecto hover para los labels de la agenda */
+.agenda label:hover {
+    transition: 0.3s;
+    background-color: rgb(230, 230, 230);
+}
+
+/* Estilo de los radio buttons de la agenda */
+.agenda input[type="radio"]:checked + label {
+    background-color: rgb(230, 230, 230);
+    font-weight: 500;
+}
+
+/* Estilo de la info */
+.info-servicio {
+    border-radius: 10px;
+    width: 60%;
+    margin-top: -792px;
+    margin-left: 240px;
+}
+
+/* Paneles ocultos */
+.panel {
+    display: none;
 }
