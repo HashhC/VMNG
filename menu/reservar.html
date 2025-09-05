@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>V&M Reservar</title>
+    <title>V&M Agenda</title>
     <link rel="stylesheet" href="../Estilos/styles.css">
     <link rel="stylesheet" href="../Estilos/fonts.css">
 </head>
@@ -13,8 +13,8 @@
             <Ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="servicios.html">Servicios</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="soporte.html">Soporte</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="reseñas.html">Reseñas</a></li>
             </Ul>
 
             <input type="checkbox" id="togglePerfil" hidden>
@@ -28,19 +28,121 @@
             </div>
         </nav>
     </header>
+    <main>
+        <div class="contenedor-agenda">
+            <div class="agenda">
+                <h3>Seleccione un servicio</h3>
+                <ul>
+                    <hr>
+                    <li>
+                        <input type="radio" name="servicio" id="lavado" hidden>
+                        <label for="lavado">Lavado</label>
+                    </li>
+                    <hr>
+                    <li>
+                        <input type="radio" name="servicio" id="brushing" hidden>
+                        <label for="brushing">Brushing</label>
+                    </li>
+                    <hr>
+                    <li>
+                        <input type="radio" name="servicio" id="tinta" hidden>
+                        <label for="tinta">Tinta</label>
+                    </li>
+                    <hr>
+                    <li>
+                        <input type="radio" name="servicio" id="planchado" hidden>
+                        <label for="planchado">Planchado</label>
+                    </li>
+                    <hr>
+                    <li>
+                        <input type="radio" name="servicio" id="progresivo" hidden>
+                        <label for="progresivo">Progresivo</label>
+                    </li>
+                    <hr>
+                    <li>
+                        <input type="radio" name="servicio" id="claritos" hidden>
+                        <label for="claritos">Claritos</label>
+                    </li>
+                    <hr>
+                    <li>
+                        <input type="radio" name="servicio" id="botox" hidden>
+                        <label for="botox">Botox</label>
+                    </li>
+                    <hr>
+                    <li>
+                        <input type="radio" name="servicio" id="bano" hidden>
+                        <label for="bano">Baño de crema</label>
+                    </li>
+                    <hr>
+                    <li>
+                        <input type="radio" name="servicio" id="balayage" hidden>
+                        <label for="balayage">Balayage</label>
+                    </li>
+                    <hr>
+                    <li>
+                        <input type="radio" name="servicio" id="iluminacion" hidden>
+                        <label for="iluminacion">Iluminación</label>
+                    </li>
+                    <hr>
+                    <li>
+                        <input type="radio" name="servicio" id="mechas" hidden>
+                        <label for="mechas">Mechas</label>
+                    </li>
+                    <hr>
+                    <li>
+                        <input type="radio" name="servicio" id="coloracion" hidden>
+                        <label for="coloracion">Coloración</label>
+                    </li>
+                    <hr>
+                    <li>
+                        <input type="radio" name="servicio" id="barrido" hidden>
+                        <label for="barrido">Barrido</label>
+                    </li>
+                </ul>
+            </div>
 
-    <main class="contenido">
-        <div class="contacto">
-            <h2>Contacto</h2>
-                <p>¿Tenés alguna consulta o querés agendar un turno? No dudes en contactarnos a través de los siguientes medios:</p>
-            <ul class="contactoList">
-                <li>
-                    <img src="../Resources/Images/whatsappIcon.png" class="iconoContacto">
-                    <p>Teléfono: +598 1234 5678</p>
-                </li>
-                <li>
-                    <img src="../Resources/Images/gmailIcon.png" class="iconoContacto">
-                    <p>Email: example@gmail.com
-                </li>
-            </body>
+            <div class="info-servicio">
+                <div class="panel" id="info-lavado">
+                    Incluye lavado con productos profesionales para mantener el cabello limpio y saludable.
+                </div>
+                <div class="panel" id="info-brushing">
+                    Brushing con secado profesional para dar forma y estilo.
+                </div>
+                <div class="panel" id="info-tinta">
+                    Aplicación de tinta para teñir el cabello.
+                </div>
+                <div class="panel" id="info-planchado">
+                    Planchado con plancha profesional para un liso perfecto.
+                </div>
+                <div class="panel" id="info-progresivo">
+                    Tratamiento progresivo para alisar el cabello de forma duradera.
+                </div>
+                <div class="panel" id="info-claritos">
+                    Claritos para dar luminosidad y contraste al cabello.
+                </div>
+                <div class="panel" id="info-botox">
+                    Botox capilar para reparar y nutrir el cabello.
+                </div>
+                <div class="panel" id="info-bano">
+                    Tratamiento nutritivo con baño de crema.
+                </div>
+                <div class="panel" id="info-balayage">
+                    Balayage con efecto natural y luminoso.
+                </div>
+                <div class="panel" id="info-iluminacion">
+                    Iluminación estratégica para resaltar facciones.
+                </div>
+                <div class="panel" id="info-mechas">
+                    Mechas en diferentes tonos según preferencia.
+                </div>
+                <div class="panel" id="info-coloracion">
+                    Coloración completa del cabello.
+                </div>
+                <div class="panel" id="info-barrido">
+                    Barrido de color para matizar el cabello.
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
 </html>

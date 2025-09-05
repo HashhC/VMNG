@@ -1,9 +1,11 @@
- *{
+/* Reset de márgenes y paddings, y box-sizing para todos los elementos */
+*{
     padding: 0;
     margin: 0;  
     box-sizing: border-box; 
 }
 
+/* Estilo de la selección de texto */
 ::selection {
   background: rgb(119, 119, 119); /* color de fondo de la selección */
   color: white;        /* color del texto seleccionado */
@@ -473,12 +475,24 @@ p{
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     font-family: "Montserrat";
+    z-index: 1000;
+}
+
+/* En pantallas pequeñas, dejar flujo normal para evitar solapamientos */
+@media (max-width: 600px) {
+    .register-container {
+        position: static;
+        transform: none;
+        margin: auto;
+        width: 90%;
+    }
 }
 
 /* Estilo del formulario de registro */
 .register-form {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 /* Estilo del título del formulario de registro */
@@ -591,8 +605,30 @@ p{
     width: 40px;
 }
 
+/* Contenedor de la agenda */
+.agenda{
+    position: fixed;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 260px;
+    max-width: 90%;
+    padding: 10px;
+    z-index: 500;
+    text-align: center;
+}
+
+/* En pantallas pequeñas, dejar flujo normal para evitar solapamientos */
+@media (max-width: 600px) {
+    .agenda{
+        position: static;
+        transform: none;
+        margin: 0px auto;
+        width: 90%;
+    }
+}
+
 .agenda h3{
-    width: 220px;
+    width: 240px;
     font-weight: 600;
     margin: 10px;
     text-align: center;
@@ -617,11 +653,15 @@ p{
 }
 
 /* Estilo de la lista de la agenda */
-.agenda ul {
-    margin: 0 0 0 20px;
+.agenda ul{
+    width: 220px;
+    height: 600px;
+    scrollbar-width: thin;
+    overflow-x: hidden;
+    overflow-y: auto;
     text-align: center;
     list-style: none;
-    width: 200px;
+    margin: 0 0 0 20px;
     padding: 0;
 }
 
