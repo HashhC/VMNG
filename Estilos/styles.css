@@ -248,7 +248,7 @@ p{
 /* Estilo del contenedor de servicios */
 .serviciosPreview {
     text-align: center;
-    background-color: rgb(241, 241, 241);
+    background-color: rgb(250, 250, 250);
     margin-top: 20px;
     padding-top: 32px;
     padding-bottom: 30px;
@@ -310,7 +310,7 @@ p{
 
 /* Estilo del botón ver más servicios */
 .verMasServicios {
-    margin-top: 20px;
+    margin: 20px 0 20px 0;
     padding: 10px 0;
     border: none;
     border-radius: 5px;
@@ -334,6 +334,72 @@ p{
     color: white;
 }
 
+/* Estilo del contenedor de productos */
+.productosPreview{
+    text-align: center;
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+/* Estilo del título de productos */
+.productosPreview h2{
+    margin-bottom: 20px;
+}
+
+/* Contenedor para la lista de servicios en la página principal */
+.productosIndex {
+    align-items: center;
+    margin: auto;
+    width: 80%;
+}
+
+/* Estilo de los ítems de lista no ordenada */
+.productosIndex li{
+    display: inline-block;
+    width: 340px;
+    margin: 25px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 7px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo de imágenes en listas no ordenadas */
+.productosIndex li img{
+    object-fit: cover;
+    width: 330px;
+    height: 280px;
+    border-radius: 8px;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/* Estilo del texto debajo de las imágenes */
+.productosIndex p{
+    font-family: "Montserrat";
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0 10px 5px 10px;
+    color: rgb(0, 0, 0);
+}
+
+/* Enlaces dentro de los servicios sin subrayado */
+.productosIndex a{
+    text-decoration: none;
+}
+
+/* Animación suave para agrandar elementos al pasar el mouse */
+.productosIndex li{
+    transition: 0.3s;
+}
+
+/* Efecto de "zoom" al pasar el mouse */
+.productosIndex li:hover{
+    transform: scale(1.04);
+}
+
 /* Estilo del contenedor de servicios */
 .servicios {
     border-top: 2px solid black;
@@ -342,6 +408,7 @@ p{
     padding-bottom: 30px;
 }
 
+/* Estilo del título de servicios */
 .servicios h2{
     margin-top: 72px;
     margin-bottom: 20px;
@@ -476,16 +543,6 @@ p{
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     font-family: "Montserrat";
     z-index: 1000;
-}
-
-/* En pantallas pequeñas, dejar flujo normal para evitar solapamientos */
-@media (max-width: 600px) {
-    .register-container {
-        position: static;
-        transform: none;
-        margin: auto;
-        width: 90%;
-    }
 }
 
 /* Estilo del formulario de registro */
@@ -627,6 +684,7 @@ p{
     }
 }
 
+/* Estilo del título de la agenda */
 .agenda h3{
     width: 240px;
     font-weight: 600;
@@ -634,6 +692,7 @@ p{
     text-align: center;
     margin-top: 92px;
 }
+
 /* Estilo del contenedor de la agenda */
 .agenda a {
     text-decoration: none;
@@ -707,4 +766,126 @@ p{
 /* Paneles ocultos */
 .panel {
     display: none;
+}
+
+/* Contenedor de productos */
+.productos{
+    border-top: 2px solid black;
+    text-align: center;
+    background-color: rgb(241, 241, 241);
+    padding-bottom: 30px;
+}
+
+/* Estilo del título de productos */
+.productos h2{
+    margin-top: 72px;
+    margin-bottom: 20px;
+}
+
+/* Contenedor para la lista de servicios en la página principal */
+.productosList {
+    align-items: center;
+    margin: auto;
+    width: 80%;
+}
+
+/* Estilo de los ítems de lista no ordenada */
+.productosList li{
+    display: inline-block;
+    width: 340px;
+    margin: 25px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 7px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo de imágenes en listas no ordenadas */
+.productosList li img{
+    object-fit: cover;
+    width: 330px;
+    height: 280px;
+    border-radius: 8px;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/* Estilo del texto debajo de las imágenes */
+.productosList p{
+    font-family: "Montserrat";
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0 10px 5px 10px;
+    color: rgb(0, 0, 0);
+}
+
+/* Enlaces dentro de los servicios sin subrayado */
+.productosList a{
+    text-decoration: none;
+}
+
+/* Animación suave para agrandar elementos al pasar el mouse */
+.productosList li{
+    transition: 0.3s;
+}
+
+/* Efecto de "zoom" al pasar el mouse */
+.productosList li:hover{
+    transform: scale(1.04);
+}
+
+/* Estilo del footer */
+.footer{
+    background-color: rgb(34, 34, 34);
+    color: white;
+    text-align: center;
+    padding: 30px 0 10px 0;
+    margin-top: 0;
+    font-family: "Montserrat";
+}
+
+/* Estilo del título del footer */
+.redes h3{
+    margin-bottom: 20px;
+}
+
+/* Estilo del contenedor de redes sociales */
+.redes img{
+    width: 40px;
+    height: 40px;
+}
+
+/* Estilo del título del footer */
+.redes ul{
+    margin: 0px;
+    list-style: none;
+}
+
+/* Estilo de los ítems de la lista de redes sociales */
+.redes ul li{
+    display: inline;
+    margin: 0 10px;
+}
+
+/* Estilo de los enlaces dentro de la lista de redes sociales */
+.redes ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+/* Efecto hover para los enlaces dentro de la lista de redes sociales */
+.copyright p{
+    margin: 30px 0 0 0;
+    color: white;
+    font-size: 14px;
+}
+
+/* Estilo del texto de copyright */
+.copyright span{
+    font-style: italic;
+    font-weight: 600;
 }

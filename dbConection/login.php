@@ -1,39 +1,49 @@
 <?php
 session_start();
 
+// Datos de conexión
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "vmng";
+
+// Crear conexión
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Verificar conexión
+if ($conn->connect_error) {
+    die("Conexión fallida: " . $conn->connect_error);
+}
+
+// Procesar formulario
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = trim($_POST['email']);
-    $contrasena = trim($_POST['password']);
+    $password = trim($_POST['password']);
 
-    if (!empty($email) && !empty($contrasena)) {
-        // Conectar a la BD
-        $conexion = mysqli_connect("localhost", "root", "", "vmng");
+    // Buscar usuario
+    $stmt = $conn->prepare("SELECT ID_usuario, Email_usuario, Nombre_usuario, Contraseña_usuario 
+                            FROM usuario 
+                            WHERE Email_usuario = ?");
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
-        if (!$conexion) {
-            die("Conexión fallida: " . mysqli_connect_error());
-        }
+    if ($result->num_rows > 0) {
+        $user = $result->fetch_assoc();
 
-        // Consulta segura
-        $stmt = mysqli_prepare($conexion, "SELECT * FROM usuario WHERE Email_usuario = ? AND Contraseña_usuario = ?");
-        mysqli_stmt_bind_param($stmt, "ss", $email, $contrasena);
-        mysqli_stmt_execute($stmt);
-        $resultado = mysqli_stmt_get_result($stmt);
+        // Verificar contraseña
+        if (password_verify($password, $user['Contraseña_usuario'])) {
+            $_SESSION['id'] = $user['ID_usuario'];
+            $_SESSION['email'] = $user['Email_usuario'];
+            $_SESSION['nombre'] = $user['Nombre_usuario'];
 
-        if (mysqli_num_rows($resultado) == 1) {
-            // Usuario válido, iniciar sesión
-            $usuario = mysqli_fetch_assoc($resultado);
-            $_SESSION['usuario'] = $usuario['Nombre_usuario'];
-
-            header("Location: ../Menu/index.html");
+            header("Location: ../menu/index.html?login=success");
             exit();
         } else {
-            echo "<h3 class='error'>Correo o contraseña incorrectos</h3>";
+            echo "Correo o contraseña incorrectos";
         }
-
-        mysqli_stmt_close($stmt);
-        mysqli_close($conexion);
     } else {
-        echo "<h3 class='error'>Completa todos los campos</h3>";
+        echo "Correo o contraseña incorrectos";
     }
 }
 ?>
