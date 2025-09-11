@@ -482,7 +482,7 @@ p{
     margin-bottom: 20px;
 }
 
-/* Contenedor para la lista de servicios en la página principal */
+/* Contenedor para la lista de productos en la página principal */
 .productosList {
     align-items: center;
     margin: auto;
@@ -730,16 +730,23 @@ p{
     width: 40px;
 }
 
-/* Contenedor de la agenda */
-.agenda{
+.agenda {
     position: fixed;
+    width: 600px;
+    height: auto;
     top: 50%;
-    transform: translate(0, -50%);
-    width: 260px;
-    max-width: 90%;
-    padding: 10px;
-    z-index: 500;
-    text-align: center;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    font-family: "Montserrat";
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+.agenda h2{
+    margin-top: 20px;
 }
 
 /* En pantallas pequeñas, dejar flujo normal para evitar solapamientos */
@@ -747,80 +754,58 @@ p{
     .agenda{
         position: static;
         transform: none;
-        margin: 0px auto;
+        margin: auto;
         width: 90%;
     }
 }
 
-/* Estilo del título de la agenda */
-.agenda h3{
-    width: 240px;
-    font-weight: 600;
-    margin: 10px;
-    text-align: center;
-    margin-top: 92px;
+.reservaForm{
+    padding: 20px 200px;
 }
 
-/* Estilo del contenedor de la agenda */
-.agenda a {
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    cursor: pointer;
-    background-color: black;
-}
-
-/* Estilo del texto de la agenda */
-.agenda p{
-    font-family: "Montserrat";
-    text-align: center;
-    font-size: 16px;
-    font-weight: 400;
-    margin: 0 10px 0 10px;
-    color: rgb(0, 0, 0);
-}
-
-/* Estilo de la lista de la agenda */
-.agenda ul{
-    width: 220px;
-    height: 600px;
-    scrollbar-width: thin;
-    overflow-x: hidden;
-    overflow-y: auto;
-    text-align: center;
-    list-style: none;
-    margin: 0 0 0 20px;
-    padding: 0;
-}
-
-/* Estilo de los ítems de la lista de la agenda */
-.agenda li{
-    margin: 10px 0;
-}
-
-/* Estilo de los labels de la agenda */
-.agenda label {
-    display: block;
+.reservaForm input{
+    width: 100%;
     padding: 10px;
-    border-radius: 10px;
-    font-family: "Montserrat";
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     font-size: 16px;
+    font-family: "Montserrat";
+}
+
+.reservaForm button{
+    padding: 10px;
+    background-color: rgb(129, 129, 129); 
+    color: white;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-    text-align: center;
-    transition: 0.3s;
-    background-color: white;
-    color: black;
+    font-size: 16px;
+    margin-top: 15px;
+    width: 100%;
+    font-family: "Montserrat";
 }
 
-/* Efecto hover para los labels de la agenda */
-.agenda label:hover {
-    transition: 0.3s;
-    background-color: rgb(230, 230, 230);
+.reservaForm button:hover{
+    background-color: rgb(73, 73, 73); 
 }
 
-/* Estilo de los radio buttons de la agenda */
-.agenda input[type="radio"]:checked + label {
-    background-color: rgb(230, 230, 230);
-    font-weight: 500;
+.reservaForm label{
+    font-size: 18px;
+    margin-bottom: 8px;
+    display: block;
+    font-family: "Montserrat";
+    color: rgb(0, 0, 0);
+}
+
+.reservaForm select{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: "Montserrat";
 }
 
 /* Estilo de la info */
