@@ -732,12 +732,12 @@ p{
 
 .agenda {
     position: fixed;
-    width: 600px;
+    width: 500px;
     height: auto;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgb(255, 255, 255);
+    background: rgb(34, 34, 34);
     align-items: center;
     font-family: "Montserrat";
     color: rgb(0, 0, 0);
@@ -746,7 +746,8 @@ p{
 }
 
 .agenda h2{
-    margin-top: 20px;
+    margin-top: 30px;
+    color: white;
 }
 
 /* En pantallas pequeñas, dejar flujo normal para evitar solapamientos */
@@ -760,17 +761,23 @@ p{
 }
 
 .reservaForm{
-    padding: 20px 200px;
+    margin: 0 0 20px 0;
+    padding: 20px 100px;
 }
 
 .reservaForm input{
-    width: 100%;
+    width: 300px;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
     font-family: "Montserrat";
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.reservaForm select{
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 .reservaForm button{
