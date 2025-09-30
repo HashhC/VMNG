@@ -750,16 +750,6 @@ p{
     color: white;
 }
 
-/* En pantallas pequeñas, dejar flujo normal para evitar solapamientos */
-@media (max-width: 600px) {
-    .agenda{
-        position: static;
-        transform: none;
-        margin: auto;
-        width: 90%;
-    }
-}
-
 .reservaForm{
     margin: 0 0 20px 0;
     padding: 20px 100px;
@@ -813,6 +803,13 @@ p{
     border-radius: 5px;
     font-size: 14px;
     font-family: "Montserrat";
+}
+
+.contenedor-horarios{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 15px;
 }
 
 /* Estilo de la info */
@@ -881,3 +878,4 @@ p{
     font-style: italic;
     font-weight: 600;
 }
+
