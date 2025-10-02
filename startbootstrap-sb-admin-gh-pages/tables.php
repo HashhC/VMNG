@@ -94,10 +94,12 @@
                 </nav>
             </div>
                 <main>
-                    <i class="fa-solid fa-user-plus"></i>
-                    <div class="container-table">
+                    <button type="button" class="btnAddUser" style="margin: 5.4rem 0 1rem 2rem; background-color: white; border-radius: 5px; padding: 0.8rem 1.2rem; border: none; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.27);"> 
+                        <a href="addUser.html" style="text-decoration: none; font-size:18px; color: black;">Agregar</a>
+                    </button>
+                    <div class="container-table" style="margin-left: 1rem;">
                         <table class="table caption-top">
-                            <caption>Lista de usuarios</caption>
+                            <caption style="color: black;">Lista de usuarios</caption>
                             <thead>
                             <tr>
                                 <th scope="col"><i class="fa-solid fa-list-ul"></i></th>
@@ -110,19 +112,17 @@
                             </tr>
                             </thead>
                             <tbody>
-                            
-                            <?php
-                                include "../dbConection/conexionbd.php";
-                                $sql = $conn->query ("SELECT * FROM usuario");
-                                while($datos = $sql->fetch_object()){  ?>  
-                            <tr>
+                                <?php
+                                    include "../dbConection/conexionbd.php";
+                                    $sql = $conn->query ("SELECT * FROM usuario");
+                                    while($datos = $sql->fetch_object()){  ?>  
+                                <tr>
                                 <td><?= $datos->ID_usuario?></td>
                                 <td><?= $datos->Nombre_usuario?></td>
                                 <td><?= $datos->Apellido_usuario?></td>
-                                <td><?= $datos->Email_Usuario?></td>
-                                <td><?= $datos->Contraseña_Usuario?></td>
+                                <td><?= $datos->Email_usuario?></td>
+                                <td><?= $datos->Contraseña_usuario?></td>
                                 <td><?= $datos->Fecha_creación?></td>
-                                
 
                                 <td>
                                     <a href="" class="btn btn-small btn_warning"><i class="fa-solid fa-pen-to-square">m</i></a>
