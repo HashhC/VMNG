@@ -112,15 +112,15 @@
                             <tbody>
                             
                             <?php
-                                include "conexionbd.php";
+                                include "../dbConection/conexionbd.php";
                                 $sql = $conn->query ("SELECT * FROM usuario");
                                 while($datos = $sql->fetch_object()){  ?>  
                             <tr>
                                 <td><?= $datos->ID_usuario?></td>
                                 <td><?= $datos->Nombre_usuario?></td>
                                 <td><?= $datos->Apellido_usuario?></td>
-                                <td><?= $datos->Email_usuario?></td>
-                                <td><?= $datos->Contraseña_usuario?></td>
+                                <td><?= $datos->Email_Usuario?></td>
+                                <td><?= $datos->Contraseña_Usuario?></td>
                                 <td><?= $datos->Fecha_creación?></td>
                                 
 

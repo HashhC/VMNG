@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V&M Agenda</title>
+    <link rel="stylesheet" href="../Estilos/styles.css">
+    <link rel="stylesheet" href="../Estilos/fonts.css">
+</head>
+<body>
+    <header>
+        <nav class="menu">
+            <Ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="reseñas.html">Reseñas</a></li>
+            </Ul>
+
+            <input type="checkbox" id="togglePerfil" hidden>
+            <label for="togglePerfil" class="login">
+                <a><img src="../Resources/Images/user.png"></a>
+            </label>
+
+            <div class="opcionesPerfil">
+                <a href="login.html">Iniciar Sesión</a>
+                <a href="register.html">Registrarse</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="contenedor-agenda">
+            <div class="agenda">
+            <h2>Reserva tu turno</h2>
+                <form class="reservaForm" id="reservaForm" action="../dbConection/reservar.php" method="POST">
+                    <input type="text" id="nombre" name="nombre" required placeholder="Nombre Completo">
+                    <input type="email" id="email" name="email" required placeholder="Correo Electrónico">
+
+                    <select id="servicio" name="servicio" required>
+                        <option value="" disabled selected>Seleccione un servicio</option>
+                        <option value="lavado">Lavado</option>
+                        <option value="lavadoBrushingPlancha">Lavado, brushing y plancha</option>
+                        <option value="brushing">Brushing</option>
+                        <option value="tinta">Tinta</option>
+                        <option value="plancha">Planchado</option>
+                        <option value="progresivoFormol">Progresivo con formol</option>
+                        <option value="ProgresivoSFormol">Progresivo sin formol</option>
+                        <option value="claritos">Claritos</option>
+                        <option value="botox">Botox</option>
+                        <option value="bañoCrema">Baño de crema</option>
+                        <option value="balayage">Balayage</option>
+                        <option value="iluminacion">Iluminación</option>
+                        <option value="mechas">Mechas</option>
+                        <option value="coloracion">Coloración</option>
+                        <option value="barrido">Barrido</option>
+                    </select>
+
+                    <input class="fecha" type="date" id="fecha" name="fecha" required>
+
+                    <select id="horario" name="horario" required>
+                        <option value="" disabled selected>Seleccione un horario</option>
+                        <option value="opcion1">16:00</option>
+                        <option value="opcion2">17:00</option>
+                        <option value="opcion3">18:00</option>
+                        <option value="opcion4">19:00</option>
+                        <option value="opcion5">20:00</option>
+                        <option value="opcion6">21:00</option>
+                        <option value="opcion6">22:00</option>
+                    </select>
+
+                    <button type="submit">Reservar</button>
+                </form>
+        </div>
+    </main>
+</body>
+</html>
