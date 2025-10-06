@@ -120,8 +120,8 @@
                             <td><?= $datos->ID_usuario?></td>
                             <td><?= $datos->Nombre_usuario?></td>
                             <td><?= $datos->Apellido_usuario?></td>
-                            <td><?= $datos->Email_Usuario?></td>
-                            <td><?= $datos->Contraseña_Usuario?></td>
+                            <td><?= $datos->Email_usuario?></td>
+                            <td><?= $datos->Contraseña_usuario?></td>
                             <td><?= $datos->Fecha_creación?></td>
                             <td>
                                 <a href="" class="btn btn-small btn_warning"><i class="fa-solid fa-pen-to-square">m</i></a>

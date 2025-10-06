@@ -1,18 +1,24 @@
 <?php
     include "../dbConection/conexionbd.php";
-    if(!empty($_POST['btnUser'])){
-        if(empty($_POST['Nombre_usuario']) || empty($_POST['Apellido_usuario']) || empty($_POST['Email_Usuario']) || empty($_POST['Contraseña_Usuario']) || empty($_POST['Fecha_creación'])){
-            
-            $Nombre_usuario = $_POST['Nombre_usuario'];
-            $Apellido_usuario = $_POST['Apellido_usuario'];
-            $Email_Usuario = $_POST['Email_Usuario'];
-            $Contraseña_Usuario = $_POST['Contraseña_Usuario'];
-            $Fecha_creación = $_POST['Fecha_creación'];
-            $sql = $conn->query("INSERT INTO usuario (Nombre_usuario, Apellido_usuario, Email_Usuario, Contraseña_Usuario, Fecha_creación) VALUES ('$Nombre_usuario', '$Apellido_usuario', '$Email_Usuario', '$Contraseña_Usuario', '$Fecha_creación')");
-            if($sql==1){
+    if(($_SERVER["REQUEST_METHOD"] == "POST")){
+
+        $Nombre_usuario = trim($_POST['name']);
+        $Apellido_usuario = trim($_POST['lastName']);
+        $Email_usuario = trim($_POST['email']);
+        $Contraseña_usuario = password_hash($_POST['password'], PASSWORD_DEFAULT);
+
+        if (!empty($Nombre_usuario) && !empty($Apellido_usuario) && !empty($Email_usuario) && !empty($Contraseña_usuario)) {
+            $Fecha_creación = date("Y-m-d H:i:s");
+
+            $stmt = mysqli_prepare($conn, "INSERT INTO usuario (Nombre_usuario, Apellido_usuario, Email_usuario, Contraseña_usuario, Fecha_creación) VALUES (?, ?, ?, ?, ?)");
+            mysqli_stmt_bind_param($stmt, "sssss", $Nombre_usuario, $Apellido_usuario, $Email_usuario, $Contraseña_usuario, $Fecha_creación);
+
+            if (mysqli_stmt_execute($stmt)) {
+                mysqli_stmt_close($stmt);
+                mysqli_close($conn);
+
                 echo '<div class="alert alert-success">Usuario agregado correctamente</div>';
                 header("Location: ../dashboard/tables.php");
-                
             exit;
 
             }else{
@@ -21,7 +27,6 @@
             
             }else{
                 echo '<div class="alert alert-warning">Los campos estan vacios</div>';
-            
         }
     }
 ?>
