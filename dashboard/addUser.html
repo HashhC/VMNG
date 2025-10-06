@@ -94,14 +94,14 @@
             </div>
     <main>
         <div class="addUser-container">
-            <form class="addUser-form" id="addUser-form" action="" method="POST">
+            <form class="addUser-form" id="addUser-form" action="../dbConection/addUser.php" method="POST">
                 <h2>Añadir empleado</h2>
                 <input type="text" id="name" name="name" required placeholder="Nombre"minlength="3" maxlength="16">
                 <input type="text" id="lastName" name="lastName" required placeholder="Apellido"minlength="3" maxlength="16">
                 <input type="email" id="email" name="email" required placeholder="Correo Electrónico">
                 <input type="password" id="password" name="password" required placeholder="Contraseña" minlength="8" maxlength="16">
         
-                <button type="submit">Añadir</button>
+                <button class="btnUser" type="submit">Añadir</button>
             </form>
         </div>
     </main>
