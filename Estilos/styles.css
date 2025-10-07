@@ -949,6 +949,7 @@ p{
 }
 
 .borrarUser-container {
+    display: none;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -1025,3 +1026,17 @@ p{
     background-color: rgba(255, 255, 255, 0.8);
 }
 
+.borrarUser-container a {
+    display:block;
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+}
+
+.borrarUser-container a:hover {
+    color: rgb(129, 129, 129);
+}
+
+#toggleBorrar:checked + label + .borrarUser-container {
+    display: block;
+}

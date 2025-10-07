@@ -129,29 +129,36 @@
                                     <td><?= $datos->Rol?></td>
                                     <td><?= $datos->Fecha_creación?></td>
                                     <td>
-                                        <a href="/dashboard/borrarUser.html" class="btn btn-small btn_warning"><i class="fa-solid fa-pen-to-square">m</i></a>
-                                        <a href="" class="btn btn-small btn_danger"><i class="fa-solid fa-user-xmark">b</i></a>
+                                        
+                                        <a href="" class="btn btn-small btn_danger"><i class="fa-solid fa-pen-to-square">b</i></a>
+
+                                        <input type="checkbox" id="toggleBorrar" hidden>
+                                            <label for="toggleBorrar" class="borrarUser-label">
+                                                <a class="btn btn-small btn_warning"><i class="fa-solid fa-user-xmark">m</i></a>
+                                            </label>
+                                        
+                                        <div class="borrarUser-container">
+                                            <form class="borrarUser-form" id="borrarUser-form" action="../dbConection/borrarUser.php" method="POST">
+                                                <h2>Eliminar usuario</h2>
+                                                <input type="number" id="id" name="id" required placeholder="ID" minlength="1" maxlength="99999" min="1" max="99999">
+                                                <div class="form-buttons">
+                                                    <button type="submit">Aceptar</button>
+                                                    <button>Cancelar</button>
+                                                </div>
+                                            </form>
+                                        </div>
                                     </td>
                                 </tr>                  
                                 <?php
                                     }
                                 ?>
                             </tbody>
-                                
                         </table> 
                                 
                         <button type="button" class="btnAddUser" style="margin: 5.4rem 0 1rem 2rem; background-color: white; border-radius: 5px; padding: 0.8rem 1.2rem; border: none; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.27);"> 
                             <a href="addUser.html" style="text-decoration: none; font-size:18px; color: black;">Agregar</a>
                         </button>
 
-                        <div class="borrarUser-container">
-                            <form class="borrarUser-form" id="borrarUser-form" action="../dbConection/borrarUser.php" method="POST">
-                                <h2>Eliminar usuario</h2>
-                                <input type="number" id="id" name="id" required placeholder="ID" minlength="1" maxlength="99999" min="1" max="99999">
-                                <div class="form-buttons">
-                                    <button type="submit">Aceptar</button>
-                                    <button>Cancelar</button>
-                                </div>
                             </form>
                         </div>
                     </div>
