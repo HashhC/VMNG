@@ -102,7 +102,6 @@
                         </ol>
                     <div class="container-table" style="margin-left: 1rem;">
                         <table class="table caption-top">
-                            <caption style="color: black;">Lista de usuarios</caption>
                             <thead>
                             <tr>
                                 <th scope="col"><i class="fa-solid fa-list-ul"></i></th>
