@@ -21,6 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!empty($nombre) && !empty($apellido) && !empty($email) && !empty($password)) {
 
         $fecha = date("Y-m-d H:i:s");
+        $Rol = 'Usuario';
 
         $check_stmt = $conn->prepare("SELECT ID_usuario FROM usuario WHERE Email_usuario = ?"); 
         $check_stmt->bind_param("s", $email);
@@ -35,8 +36,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         //}
 
         // Sentencia
-        $stmt = mysqli_prepare($conn, "INSERT INTO usuario (Nombre_usuario, Apellido_usuario, Email_usuario, Contraseña_usuario, Fecha_creación) VALUES (?, ?, ?, ?, ?)");
-        mysqli_stmt_bind_param($stmt, "sssss", $nombre, $apellido, $email, $password, $fecha);
+        $stmt = mysqli_prepare($conn, "INSERT INTO usuario (Nombre_usuario, Apellido_usuario, Email_usuario, Contraseña_usuario, Rol, Fecha_creación) VALUES (?, ?, ?, ?, ?, ?)");
+        mysqli_stmt_bind_param($stmt, "ssssss", $nombre, $apellido, $email, $password, $Rol, $fecha);
 
         
         if (mysqli_stmt_execute($stmt)) {

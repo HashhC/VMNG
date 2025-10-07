@@ -93,55 +93,65 @@
                 </div>
             </nav>
         </div>
+        <div id="layoutSidenav_content">
             <main>
-                <button type="button" class="btnAddUser" style="margin: 5.4rem 0 1rem 2rem; background-color: white; border-radius: 5px; padding: 0.8rem 1.2rem; border: none; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.27);"> 
-                    <a href="addUser.html" style="text-decoration: none; font-size:18px; color: black;">Agregar</a>
-                </button>
-                <div class="container-table" style="margin-left: 1rem;">
-                    <table class="table caption-top">
-                        <caption style="color: black;">Lista de usuarios</caption>
-                        <thead>
-                        <tr>
-                            <th scope="col"><i class="fa-solid fa-list-ul"></i></th>
-                            <th scope="col">ID</th>
-                            <th scope="col">Nombre</th>
-                            <th scope="col">Apellido</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Contrseña</th>
-                            <th scope="col">Fecha de creación</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                            <?php
-                                include "../dbConection/conexionbd.php";
-                                $sql = $conn->query ("SELECT * FROM usuario");
-                                while($datos = $sql->fetch_object()){  ?>  
+                <div class="container-fluid px-4">
+                    <h1 class="mt-4">Lista de Usuarios</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item active">Lista de Usuarios</li>
+                        </ol>
+                    <div class="container-table" style="margin-left: 1rem;">
+                        <table class="table caption-top">
+                            <caption style="color: black;">Lista de usuarios</caption>
+                            <thead>
                             <tr>
-                            <td><?= $datos->ID_usuario?></td>
-                            <td><?= $datos->Nombre_usuario?></td>
-                            <td><?= $datos->Apellido_usuario?></td>
-                            <td><?= $datos->Email_usuario?></td>
-                            <td><?= $datos->Contraseña_usuario?></td>
-                            <td><?= $datos->Fecha_creación?></td>
-                            <td>
-                                <a href="" class="btn btn-small btn_warning"><i class="fa-solid fa-pen-to-square">m</i></a>
-                                <a href="" class="btn btn-small btn_danger"><i class="fa-solid fa-user-xmark">b</i></a>
-                            </td>
-                        </tr>                  
-                        <?php
-                            }
-                        ?>
-                        </tbody>
-                        
-                    </table> 
+                                <th scope="col"><i class="fa-solid fa-list-ul"></i></th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Apellido</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Contrseña</th>
+                                <th scope="col">Rol</th>
+                                <th scope="col">Fecha de creación</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                    include "../dbConection/conexionbd.php";
+                                    $sql = $conn->query ("SELECT * FROM usuario");
+                                    while($datos = $sql->fetch_object()){  ?>  
+                                <tr>
+                                <td><?= $datos->ID_usuario?></td>
+                                <td><?= $datos->Nombre_usuario?></td>
+                                <td><?= $datos->Apellido_usuario?></td>
+                                <td><?= $datos->Email_usuario?></td>
+                                <td><?= $datos->Contraseña_usuario?></td>
+                                <td><?= $datos->Rol?></td>
+                                <td><?= $datos->Fecha_creación?></td>
+                                <td>
+                                    <a href="" class="btn btn-small btn_warning"><i class="fa-solid fa-pen-to-square">m</i></a>
+                                    <a href="" class="btn btn-small btn_danger"><i class="fa-solid fa-user-xmark">b</i></a>
+                                </td>
+                            </tr>                  
+                            <?php
+                                }
+                            ?>
+                            </tbody>
+                            
+                        </table> 
+                        <button type="button" class="btnAddUser" style="margin: 5.4rem 0 1rem 2rem; background-color: white; border-radius: 5px; padding: 0.8rem 1.2rem; border: none; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.27);"> 
+                            <a href="addUser.html" style="text-decoration: none; font-size:18px; color: black;">Agregar</a>
+                        </button>
+                    </div>
                 </div>
             </main>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-    <script src="js/scripts.js"></script>
+    <script src="/dashboard/js/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+    <script src="assets/demo/chart-area-demo.js"></script>
+    <script src="assets/demo/chart-bar-demo.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
-    <script src="js/datatables-simple-demo.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="/dashboard/js/datatables-simple-demo.js"></script>
 </body>
 </html>
