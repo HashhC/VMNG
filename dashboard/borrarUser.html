@@ -95,22 +95,13 @@
     <div id="layoutSidenav_content">
         <main>
             <div class="container-fluid px-4">
-                <div class="addUser-container">
-                    <form class="addUser-form" id="addUser-form" action="../dbConection/addUser.php" method="POST">
-                        <h2>Añadir empleado</h2>
-                        <input type="text" id="name" name="name" required placeholder="Nombre"minlength="3" maxlength="16">
-                        <input type="text" id="lastName" name="lastName" required placeholder="Apellido"minlength="3" maxlength="16">
-                        <input type="email" id="email" name="email" required placeholder="Correo Electrónico">
-                        <input type="password" id="password" name="password" required placeholder="Contraseña" minlength="8" maxlength="16">
-                    
-                        <select class="selectRol "name="rol" id="rol">
-                            <option value="" disabled selected>Seleccione un rol</option>
-                            <option value="Administrador">Administrador</option>
-                            <option value="Empleado">Empleado</option>
-                            <option value="Cliente">Cliente</option>
-                        </select>
+                <div class="borrarUser-container">
+                    <form class="borrarUser-form" id="borrarUser-form" action="../dbConection/borrarUser.php" method="POST">
+                        <h2>Eliminar usuario</h2>
+                        <input type="number" id="id" name="id" required placeholder="ID" minlength="1" maxlength="99999" min="1" max="99999">
 
-                        <button type="submit">Añadir</button>
+                        <button type="submit">Aceptar</button>
+                        <button>Cancelar</button>
                     </form>
                 </div>
             </div>

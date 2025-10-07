@@ -119,18 +119,18 @@
                                     $sql = $conn->query ("SELECT * FROM usuario");
                                     while($datos = $sql->fetch_object()){  ?>  
                                 <tr>
-                                <td><?= $datos->ID_usuario?></td>
-                                <td><?= $datos->Nombre_usuario?></td>
-                                <td><?= $datos->Apellido_usuario?></td>
-                                <td><?= $datos->Email_usuario?></td>
-                                <td><?= $datos->Contraseña_usuario?></td>
-                                <td><?= $datos->Rol?></td>
-                                <td><?= $datos->Fecha_creación?></td>
-                                <td>
-                                    <a href="" class="btn btn-small btn_warning"><i class="fa-solid fa-pen-to-square">m</i></a>
-                                    <a href="" class="btn btn-small btn_danger"><i class="fa-solid fa-user-xmark">b</i></a>
-                                </td>
-                            </tr>                  
+                                    <td><?= $datos->ID_usuario?></td>
+                                    <td><?= $datos->Nombre_usuario?></td>
+                                    <td><?= $datos->Apellido_usuario?></td>
+                                    <td><?= $datos->Email_usuario?></td>
+                                    <td><?= $datos->Contraseña_usuario?></td>
+                                    <td><?= $datos->Rol?></td>
+                                    <td><?= $datos->Fecha_creación?></td>
+                                    <td>
+                                        <a href="borrarUser.html" class="btn btn-small btn_warning"><i class="fa-solid fa-pen-to-square">m</i></a>
+                                        <a href="" class="btn btn-small btn_danger"><i class="fa-solid fa-user-xmark">b</i></a>
+                                    </td>
+                                </tr>                  
                             <?php
                                 }
                             ?>

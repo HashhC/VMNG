@@ -954,3 +954,78 @@ p{
     background-color: rgba(255, 255, 255, 0.8);
 }
 
+.borrarUser-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(34, 34, 34);
+    padding: 30px 40px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    font-family: "Montserrat";
+    z-index: 1000;
+}
+
+/* Estilo del formulario de registro */
+.borrarUser-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Estilo del título del formulario de registro */
+.borrarUser-form h2 {
+    text-align: center;
+    color: white;
+    margin-bottom: 35px;
+    font-size: 30px;
+}
+
+/* Estilo de los campos de entrada del formulario de registro */
+.borrarUser-form input {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    width: 350px;
+    font-family: "Montserrat";
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Estilo del botón de envío del formulario de registro */
+.borrarUser-form button {
+    padding: 10px;
+    background-color: rgb(129, 129, 129); 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: "Montserrat";
+    margin-top: 15px;
+}
+
+/* Efecto hover para el botón de envío del formulario de registro */
+.borrarUser-form button:hover {
+    background-color: rgb(73, 73, 73); 
+}
+
+/* Estilo al enfocar los campos de entrada del formulario de registro */
+.borrarUser-form input:focus {
+    outline: none;
+    border: 2px solid rgb(129, 129, 129); 
+}
+
+.borrarUser-container .selectRol {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    width: 350px;
+    font-family: "Montserrat";
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
