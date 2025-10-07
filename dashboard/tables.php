@@ -9,6 +9,8 @@
     <title>Tablas - SB Admin</title>
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
     <link href="../Estilos/stylesBootstrap.css" rel="stylesheet" />
+    <link href="../Estilos/styles.css" rel="stylesheet" />
+    <link href="../Estilos/fonts.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
 </head>
@@ -103,15 +105,15 @@
                     <div class="container-table" style="margin-left: 1rem;">
                         <table class="table caption-top">
                             <thead>
-                            <tr>
-                                <th scope="col"><i class="fa-solid fa-list-ul"></i></th>
-                                <th scope="col">Nombre</th>
-                                <th scope="col">Apellido</th>
-                                <th scope="col">Email</th>
-                                <th scope="col">Contrseña</th>
-                                <th scope="col">Rol</th>
-                                <th scope="col">Fecha de creación</th>
-                            </tr>
+                                <tr>
+                                    <th scope="col"><i class="fa-solid fa-list-ul"></i></th>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Apellido</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Contrseña</th>
+                                    <th scope="col">Rol</th>
+                                    <th scope="col">Fecha de creación</th>
+                                </tr>
                             </thead>
                             <tbody>
                                 <?php
@@ -127,23 +129,35 @@
                                     <td><?= $datos->Rol?></td>
                                     <td><?= $datos->Fecha_creación?></td>
                                     <td>
-                                        <a href="borrarUser.html" class="btn btn-small btn_warning"><i class="fa-solid fa-pen-to-square">m</i></a>
+                                        <a href="/dashboard/borrarUser.html" class="btn btn-small btn_warning"><i class="fa-solid fa-pen-to-square">m</i></a>
                                         <a href="" class="btn btn-small btn_danger"><i class="fa-solid fa-user-xmark">b</i></a>
                                     </td>
                                 </tr>                  
-                            <?php
-                                }
-                            ?>
+                                <?php
+                                    }
+                                ?>
                             </tbody>
-                            
+                                
                         </table> 
+                                
                         <button type="button" class="btnAddUser" style="margin: 5.4rem 0 1rem 2rem; background-color: white; border-radius: 5px; padding: 0.8rem 1.2rem; border: none; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.27);"> 
                             <a href="addUser.html" style="text-decoration: none; font-size:18px; color: black;">Agregar</a>
                         </button>
+
+                        <div class="borrarUser-container">
+                            <form class="borrarUser-form" id="borrarUser-form" action="../dbConection/borrarUser.php" method="POST">
+                                <h2>Eliminar usuario</h2>
+                                <input type="number" id="id" name="id" required placeholder="ID" minlength="1" maxlength="99999" min="1" max="99999">
+                                <div class="form-buttons">
+                                    <button type="submit">Aceptar</button>
+                                    <button>Cancelar</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
-            </main>
-        </div>
+            </div>
+        </main>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="/dashboard/js/scripts.js"></script>

@@ -12,7 +12,7 @@
             $Fecha_creación = date("Y-m-d H:i:s");
 
             $stmt = mysqli_prepare($conn, "INSERT INTO usuario (Nombre_usuario, Apellido_usuario, Email_usuario, Contraseña_usuario, Rol, Fecha_creación) VALUES (?, ?, ?, ?, ?, ?)");
-            mysqli_stmt_bind_param($stmt, "iiiiii", $Nombre_usuario, $Apellido_usuario, $Email_usuario, $Contraseña_usuario, $Rol, $Fecha_creación);
+            mysqli_stmt_bind_param($stmt, "ssssss", $Nombre_usuario, $Apellido_usuario, $Email_usuario, $Contraseña_usuario, $Rol, $Fecha_creación);
 
             if (mysqli_stmt_execute($stmt)) {
                 mysqli_stmt_close($stmt);

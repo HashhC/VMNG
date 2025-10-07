@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Añadir empleado</title>
+        <title>Eliminar empleado</title>
         <link rel="stylesheet" href="../Estilos/styles.css">
         <link rel="stylesheet" href="../Estilos/fonts.css">
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
@@ -99,9 +99,10 @@
                     <form class="borrarUser-form" id="borrarUser-form" action="../dbConection/borrarUser.php" method="POST">
                         <h2>Eliminar usuario</h2>
                         <input type="number" id="id" name="id" required placeholder="ID" minlength="1" maxlength="99999" min="1" max="99999">
-
-                        <button type="submit">Aceptar</button>
-                        <button>Cancelar</button>
+                        <div class="form-buttons">
+                            <button type="submit">Aceptar</button>
+                            <button>Cancelar</button>
+                        </div>
                     </form>
                 </div>
             </div>

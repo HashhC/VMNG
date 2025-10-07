@@ -20,7 +20,7 @@ body{
 }
 
 /* Estilo del encabezado 1*/
-h1{
+.titulo{
     text-align: center;
     font-size: 124px;
     font-family: "Montserrat";
@@ -892,14 +892,12 @@ p{
     z-index: 1000;
 }
 
-/* Estilo del formulario de registro */
 .addUser-form {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
-/* Estilo del título del formulario de registro */
 .addUser-form h2 {
     text-align: center;
     color: white;
@@ -907,7 +905,6 @@ p{
     font-size: 30px;
 }
 
-/* Estilo de los campos de entrada del formulario de registro */
 .addUser-form input {
     padding: 10px;
     margin-bottom: 20px;
@@ -919,7 +916,6 @@ p{
     background-color: rgba(255, 255, 255, 0.8);
 }
 
-/* Estilo del botón de envío del formulario de registro */
 .addUser-form button {
     padding: 10px;
     background-color: rgb(129, 129, 129); 
@@ -932,12 +928,10 @@ p{
     margin-top: 15px;
 }
 
-/* Efecto hover para el botón de envío del formulario de registro */
 .addUser-form button:hover {
     background-color: rgb(73, 73, 73); 
 }
 
-/* Estilo al enfocar los campos de entrada del formulario de registro */
 .addUser-form input:focus {
     outline: none;
     border: 2px solid rgb(129, 129, 129); 
@@ -967,14 +961,12 @@ p{
     z-index: 1000;
 }
 
-/* Estilo del formulario de registro */
 .borrarUser-form {
-    display: flex;
+    display: fixed;
     flex-direction: column;
     width: 100%;
 }
 
-/* Estilo del título del formulario de registro */
 .borrarUser-form h2 {
     text-align: center;
     color: white;
@@ -982,7 +974,6 @@ p{
     font-size: 30px;
 }
 
-/* Estilo de los campos de entrada del formulario de registro */
 .borrarUser-form input {
     padding: 10px;
     margin-bottom: 20px;
@@ -994,9 +985,16 @@ p{
     background-color: rgba(255, 255, 255, 0.8);
 }
 
-/* Estilo del botón de envío del formulario de registro */
+.borrarUser-form .form-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
 .borrarUser-form button {
     padding: 10px;
+    width: 10rem;
+    justify-content: center;
     background-color: rgb(129, 129, 129); 
     color: white;
     border: none;
@@ -1007,12 +1005,10 @@ p{
     margin-top: 15px;
 }
 
-/* Efecto hover para el botón de envío del formulario de registro */
 .borrarUser-form button:hover {
     background-color: rgb(73, 73, 73); 
 }
 
-/* Estilo al enfocar los campos de entrada del formulario de registro */
 .borrarUser-form input:focus {
     outline: none;
     border: 2px solid rgb(129, 129, 129); 
