@@ -85,7 +85,7 @@
                             <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                             Graficas
                         </a>
-                        <a class="nav-link" href="tables.html">
+                        <a class="nav-link" href="tables.php">
                             <div class="sb-nav-link-icon"><i class="fa-solid fa-list-ul"></i></div>
                             Usuarios
                         </a>

@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!empty($nombre) && !empty($apellido) && !empty($email) && !empty($password)) {
 
         $fecha = date("Y-m-d H:i:s");
-        $Rol = 'Usuario';
+        $Rol = 'Cliente';
 
         $check_stmt = $conn->prepare("SELECT ID_usuario FROM usuario WHERE Email_usuario = ?"); 
         $check_stmt->bind_param("s", $email);
