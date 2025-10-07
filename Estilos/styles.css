@@ -880,16 +880,38 @@ p{
 }
 
 .addUser-container {
+    display: block;
+    visibility: hidden;
+    opacity: 0;
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(0.98);
     background: rgb(34, 34, 34);
     padding: 30px 40px;
     border-radius: 6px;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     font-family: "Montserrat";
     z-index: 1000;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0.3s;
+}
+
+.addUser-container a {
+    display:block;
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+}
+
+.addUser-container a:hover {
+    color: rgb(129, 129, 129);
+}
+
+#toggleAgregar:checked + label + .addUser-container {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0s;
 }
 
 .addUser-form {
@@ -949,17 +971,38 @@ p{
 }
 
 .borrarUser-container {
-    display: none;
+    display: block;
+    visibility: hidden;
+    opacity: 0;
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(0.98);
     background: rgb(34, 34, 34);
     padding: 30px 40px;
     border-radius: 6px;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     font-family: "Montserrat";
     z-index: 1000;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0.3s;
+}
+
+.borrarUser-container a {
+    display:block;
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+}
+
+.borrarUser-container a:hover {
+    color: rgb(129, 129, 129);
+}
+
+#toggleBorrar:checked + label + .borrarUser-container {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0s;
 }
 
 .borrarUser-form {
@@ -1024,19 +1067,4 @@ p{
     font-family: "Montserrat";
     font-size: 16px;
     background-color: rgba(255, 255, 255, 0.8);
-}
-
-.borrarUser-container a {
-    display:block;
-    color: white;
-    text-decoration: none;
-    padding: 15px;
-}
-
-.borrarUser-container a:hover {
-    color: rgb(129, 129, 129);
-}
-
-#toggleBorrar:checked + label + .borrarUser-container {
-    display: block;
 }

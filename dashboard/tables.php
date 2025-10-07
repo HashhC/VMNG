@@ -132,6 +132,8 @@
                                         
                                         <a href="" class="btn btn-small btn_danger"><i class="fa-solid fa-pen-to-square">b</i></a>
 
+
+
                                         <input type="checkbox" id="toggleBorrar" hidden>
                                             <label for="toggleBorrar" class="borrarUser-label">
                                                 <a class="btn btn-small btn_warning"><i class="fa-solid fa-user-xmark">m</i></a>
@@ -147,6 +149,8 @@
                                                 </div>
                                             </form>
                                         </div>
+
+
                                     </td>
                                 </tr>                  
                                 <?php
@@ -155,10 +159,27 @@
                             </tbody>
                         </table> 
                                 
-                        <button type="button" class="btnAddUser" style="margin: 5.4rem 0 1rem 2rem; background-color: white; border-radius: 5px; padding: 0.8rem 1.2rem; border: none; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.27);"> 
-                            <a href="addUser.html" style="text-decoration: none; font-size:18px; color: black;">Agregar</a>
-                        </button>
-
+                                <input type="checkbox" id="toggleAgregar" hidden>
+                                <label for="toggleAgregar" class="agregarUser-label">
+                                    <a class="btn" style="margin: 5.4rem 0 1rem 2rem; background-color: white; border-radius: 5px; padding: 0.8rem 1.2rem; border: none; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.27);">Agregar</a>
+                                </label>
+                                
+                                <div class="addUser-container">
+                                    <form class="addUser-form" id="addUser-form" action="../dbConection/addUser.php" method="POST">
+                                        <h2>Añadir empleado</h2>
+                                        <input type="text" id="name" name="name" required placeholder="Nombre"minlength="3" maxlength="16">
+                                        <input type="text" id="lastName" name="lastName" required placeholder="Apellido"minlength="3" maxlength="16">
+                                        <input type="email" id="email" name="email" required placeholder="Correo Electrónico">
+                                        <input type="password" id="password" name="password" required placeholder="Contraseña" minlength="8" maxlength="16">
+                                        <select class="selectRol "name="rol" id="rol">
+                                            <option value="" disabled selected>Seleccione un rol</option>
+                                            <option value="Administrador">Administrador</option>
+                                            <option value="Empleado">Empleado</option>
+                                            <option value="Cliente">Cliente</option>
+                                        </select>
+                                        <button type="submit">Añadir</button>
+                                    </form>
+                                </div>
                             </form>
                         </div>
                     </div>
