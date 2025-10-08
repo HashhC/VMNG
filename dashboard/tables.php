@@ -129,16 +129,32 @@
                                     <td><?= $datos->Rol?></td>
                                     <td><?= $datos->Fecha_creación?></td>
                                     <td>
+                                        <input type="checkbox" id="toggleMod" hidden>
+                                            <label for="toggleMod" class="modUser-label">
+                                                <a class="btn btn-small btn_danger"><i class="fa-solid fa-pen-to-square">b</i></a>
+                                            </label>
+                                            <div class="modUser-container">
+                                                <form class="modUser-form" id="modUser-form" action="../dbConection/addUser.php" method="POST">
+                                                    <h2>Modificar usuario</h2>
+                                                    <input type="text" id="name" name="name" required placeholder="Nombre" minlength="3" maxlength="16" value="<?= $datos->Nombre_usuario?>">
+                                                    <input type="text" id="lastName" name="lastName" required placeholder="Apellido" minlength="3" maxlength="16" value="<?= $datos->Apellido_usuario?>">
+                                                    <input type="email" id="email" name="email" required placeholder="Correo Electrónico" value="<?= $datos->Email_usuario?>">
+                                                    <select class="selectRol "name="rol" id="rol" value="<?= $datos->Rol?>">
+                                                        <option value="Administrador">Administrador</option>
+                                                        <option value="Empleado">Empleado</option>
+                                                        <option value="Cliente">Cliente</option>
+                                                    </select>
+                                                    <div class="form-buttons">
+                                                        <button type="submit">Aceptar</button>
+                                                        <button>Cancelar</button>
+                                                    </div>
+                                                </form>
+                                            </div>
                                         
-                                        <a href="" class="btn btn-small btn_danger"><i class="fa-solid fa-pen-to-square">b</i></a>
-
-
-
                                         <input type="checkbox" id="toggleBorrar" hidden>
                                             <label for="toggleBorrar" class="borrarUser-label">
                                                 <a class="btn btn-small btn_warning"><i class="fa-solid fa-user-xmark">m</i></a>
                                             </label>
-                                        
                                         <div class="borrarUser-container">
                                             <form class="borrarUser-form" id="borrarUser-form" action="../dbConection/borrarUser.php" method="POST">
                                                 <h2>Eliminar usuario</h2>
@@ -149,8 +165,6 @@
                                                 </div>
                                             </form>
                                         </div>
-
-
                                     </td>
                                 </tr>                  
                                 <?php
@@ -166,7 +180,7 @@
                                 
                                 <div class="addUser-container">
                                     <form class="addUser-form" id="addUser-form" action="../dbConection/addUser.php" method="POST">
-                                        <h2>Añadir empleado</h2>
+                                        <h2>Añadir usuario</h2>
                                         <input type="text" id="name" name="name" required placeholder="Nombre"minlength="3" maxlength="16">
                                         <input type="text" id="lastName" name="lastName" required placeholder="Apellido"minlength="3" maxlength="16">
                                         <input type="email" id="email" name="email" required placeholder="Correo Electrónico">
